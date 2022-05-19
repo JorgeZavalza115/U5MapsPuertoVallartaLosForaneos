@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "5050935384",
+    "project_id": "mapspuertovallarta",
+    "storage_bucket": "mapspuertovallarta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5050935384:android:4530227e105672402e022d",
+        "android_client_info": {
+          "package_name": "mx.edu.ittepic.maps_puertovallarta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5050935384-vclist063fupgppal3q79k949pdon6s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFWWdixJo2ntLHG5_bSunoN7-6_Zhrr_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5050935384-vclist063fupgppal3q79k949pdon6s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

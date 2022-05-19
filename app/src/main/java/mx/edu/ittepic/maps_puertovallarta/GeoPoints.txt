@@ -1,0 +1,107 @@
+// GeoPoints de Estatuas
+        // nombre: Los Milenios
+        // pos1:
+            // latitud: 20.614828
+            // longitug: -105.233215
+        // pos2:
+            // latitud: 20.614571
+            // longitug: -105.233107
+
+        // nombre: Origen y Destino
+        // Geo: 20.6138523,-105.2332633
+        // pos1:
+            // latitud: 20.614000
+            // longitug: -105.233343
+        // pos2:
+            // latitud: 20.613738
+            // longitug: -105.233192
+
+        // nombre: Nostalgia
+        // Geo: 20.613391, -105.233512
+        // pos1:
+            // latitud: 20.613527
+            // longitug: -105.233587
+        // pos2:
+            // latitud: 20.613287
+            // longitug: -105.233453
+
+        // nombre: El Sutil Comepiedras
+        // Geo: 20.612894, -105.233823
+        // pos1:
+            // latitud: 20.613055
+            // longitug: -105.233895
+        // pos2:
+            // latitud: 20.612791
+            // longitug: -105.233748
+
+        // nombre: Unicornio de la Buena Fortuna
+        // Geo: 20.6124952,-105.2345211
+        // pos1:
+            // latitud: 20.612603
+            // longitug: -105.234145
+        // pos2:
+            // latitud: 20.612316
+            // longitug: -105.234000
+
+        // nombre: Naturaleza como Madre
+        // Geo: 20.611910, -105.234332
+        // pos1:
+            // latitud: 20.612043
+            // longitug: -105.234375
+        // pos2:
+            // latitud: 20.611817
+            // longitug: -105.234262
+
+        // nombre: La Rotonda del Mar
+        // Geo: 20.611428, -105.234596
+        // pos1:
+            // latitud: 20.611633
+            // longitug: -105.234670
+        // pos2:
+            // latitud: 20.611321
+            // longitug: -105.234510
+
+        // nombre: En Busca de la Razón
+        // Geo: 20.610945, -105.234911
+        // pos1:
+            // latitud: 20.611091
+            // longitug: -105.234959
+        // pos2:
+            // latitud: 20.610869
+            // longitug: -105.234868
+
+        // nombre: Lluvia
+        // Geo: 20.610302, -105.235147
+        // pos1:
+            // latitud: 20.610586
+            // longitug: -105.235276
+        // pos2:
+            // latitud: 20.610066
+            // longitug: -105.235013
+
+        // nombre: Tritón y Sirena
+        // Geo: 20.6097606,-105.2354168
+        // pos1:
+            // latitud: 20.609946
+            // longitug: -105.235583
+        // pos2:
+            // latitud: 20.609614
+            // longitug: -105.235312
+
+        // nombre: El Niño Sobre el Caballo de Mar
+        // Geo: 20.609347, -105.235623
+        // pos1:
+            // latitud: 20.609576
+            // longitug: -105.235736
+        // pos2:
+            // latitud: 20.609099
+            // longitug: -105.235524
+
+        // nombre: Fuente de la amistad
+        // Geo: 20.6087206,-105.2364306
+        // pos1:
+            // latitud: 20.608970
+            // longitug: -105.236621
+        // pos2:
+            // latitud: 20.608702
+            // longitug: -105.236374
