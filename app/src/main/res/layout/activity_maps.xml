@@ -15,6 +15,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_not_listed_location_24"
         android:id="@+id/floating"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

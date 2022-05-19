@@ -27,7 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.GeoPoint
 import mx.edu.ittepic.maps_puertovallarta.databinding.ActivityMapsBinding
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -92,6 +92,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
             }
 
+        // Invoca al cambio de posición
+        locacion = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        var oyente = Oyente(this )
+        locacion.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 01f, oyente)
+
     }
 
     // Checa los permisos, regresa un true o un false
@@ -139,7 +144,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         }
     }
 
-
     fun activarFloating() {
         binding.floating.visibility = View.VISIBLE
     }
@@ -148,36 +152,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         binding.floating.visibility = View.GONE
     }
 
-    // Análisis de si está en una estatua
-    override fun onLocationChanged(location: Location) {
-        Toast.makeText(this, "Holi me moví", Toast.LENGTH_LONG)
-            .show()
-        var geoPosicion = GeoPoint( location.latitude, location.longitude )
-        for ( item in posicion ) {
-            if ( item.estoyEn( geoPosicion ) ) {
-                // Aquí se activaria el botoncito
-                activarFloating()
-                setTitle("Está adentro")
-            } else {
-                desactivarFloating()
-                setTitle("Está adentro")
-            }
-        }
-    }
 }
 
+// Checa si se encuentra dentro de un area de estatua
 class Oyente( puntero : MapsActivity ) : LocationListener {
     var p = puntero
     override fun onLocationChanged( location : Location ) {
         var geoPosicion = GeoPoint( location.latitude, location.longitude )
+            p.desactivarFloating()
         for ( item in p.posicion ) {
             if ( item.estoyEn( geoPosicion ) ) {
                 // Aquí se activaria el botoncito
                 p.activarFloating()
-            } else {
-                p.desactivarFloating()
             }
         }
     }
+
 
 }
