@@ -3,6 +3,7 @@ package mx.edu.ittepic.maps_puertovallarta
 import com.google.firebase.firestore.GeoPoint
 
 class Data {
+    var id : String = ""
     var nombre : String = ""
     var pos1 : GeoPoint = GeoPoint( 0.0, 0.0 )
     var pos2 : GeoPoint = GeoPoint( 0.0, 0.0 )

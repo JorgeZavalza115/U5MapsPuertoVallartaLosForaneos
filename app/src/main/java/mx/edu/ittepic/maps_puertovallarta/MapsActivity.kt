@@ -2,6 +2,7 @@ package mx.edu.ittepic.maps_puertovallarta
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
@@ -32,6 +33,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
     private lateinit var locacion : LocationManager
+    lateinit var id : String
     companion object {
         const val REQUEST_CODE_LOCATION = 0
     }
@@ -84,6 +86,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 // Datos
                 for ( document in query!! ) {
                     var data = Data()
+                    data.id = document.id.toString()
                     data.nombre = document.getString("nombre").toString()
                     data.pos1 = document.getGeoPoint("pos1")!!
                     data.pos2 = document.getGeoPoint("pos2")!!
@@ -96,6 +99,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         locacion = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         var oyente = Oyente(this )
         locacion.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 01f, oyente)
+
+        binding.floating.setOnClickListener {
+            var otraVentana = Intent(this, EstatuaActivity::class.java)
+            otraVentana.putExtra("id", id )
+            startActivity(otraVentana)
+        }
 
     }
 
@@ -164,6 +173,8 @@ class Oyente( puntero : MapsActivity ) : LocationListener {
             if ( item.estoyEn( geoPosicion ) ) {
                 // Aquí se activaria el botoncito
                 p.activarFloating()
+                p.id = item.id
+
             }
         }
     }
