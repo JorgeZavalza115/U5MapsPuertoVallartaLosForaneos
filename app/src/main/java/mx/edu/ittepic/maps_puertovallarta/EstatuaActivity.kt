@@ -30,7 +30,7 @@ class EstatuaActivity : AppCompatActivity() {
                 binding.nombre.setText( it.getString("nombre") )
                 binding.fecha.setText( it.getString("fecha") )
                 binding.artista.setText( it.getString("artista") )
-                //binding.historia.setText( it.getString("historia") )
+                binding.historia.setText( it.getString("historia") )
             }
             .addOnFailureListener {
                 AlertDialog.Builder(this)
@@ -44,7 +44,7 @@ class EstatuaActivity : AppCompatActivity() {
         progress.setMessage("Cargando información...")
         progress.setCancelable(false)
         progress.show()
-        val storage = FirebaseStorage.getInstance().reference.child("estatuas/${ idEstatua }.jpg")
+        val storage = FirebaseStorage.getInstance().reference.child("estatuas/${idEstatua}.jpg")
         val localFile = File.createTempFile("tempImage", "jpg")
         storage.getFile(localFile).addOnSuccessListener {
             if ( progress.isShowing ) {

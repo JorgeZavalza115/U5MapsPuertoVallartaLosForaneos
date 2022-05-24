@@ -100,6 +100,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         var oyente = Oyente(this )
         locacion.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 01f, oyente)
 
+        // Botón flotante
         binding.floating.setOnClickListener {
             var otraVentana = Intent(this, EstatuaActivity::class.java)
             otraVentana.putExtra("id", id )
