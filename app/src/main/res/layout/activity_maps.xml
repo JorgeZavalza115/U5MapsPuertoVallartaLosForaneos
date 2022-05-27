@@ -19,6 +19,7 @@
         android:id="@+id/floating"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:visibility="gone"/>
 
 </RelativeLayout>
