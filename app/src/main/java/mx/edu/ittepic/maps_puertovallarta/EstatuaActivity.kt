@@ -18,6 +18,7 @@ class EstatuaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEstatuaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setTitle("Información")
 
         // Obtener extras
         var idEstatua = intent.extras!!.getString("id")!!
